@@ -1,0 +1,426 @@
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 3.02279%
+Grayscale, 25.6297%
+Sobel, 69.8432%
+Display, 1.50426%
+
+Summary
+Frames per second, 5.67331
+Cycles per frame, 1.5274e+08
+Energy per frames (mJ), 246.769
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.724328
+L1 misses per frame, 206135
+L1 misses per instruction, 0.0018635
+Instruction count per frame, 1.10617e+08
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 3.02301%
+Grayscale, 25.6341%
+Sobel, 69.8345%
+Display, 1.5083%
+
+Summary
+Frames per second, 5.67255
+Cycles per frame, 1.52763e+08
+Energy per frames (mJ), 246.802
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.724249
+L1 misses per frame, 206297
+L1 misses per instruction, 0.0018649
+Instruction count per frame, 1.10621e+08
+****************************************
+combined 3 loops into 1
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 3.12651%
+Grayscale, 26.7155%
+Sobel, 68.5818%
+Display, 1.57623%
+
+Summary
+Frames per second, 5.91086
+Cycles per frame, 1.46612e+08
+Energy per frames (mJ), 236.852
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.721171
+L1 misses per frame, 178622
+L1 misses per instruction, 0.00168967
+Instruction count per frame, 1.05714e+08
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 3.17519%
+Grayscale, 26.7239%
+Sobel, 68.5294%
+Display, 1.57155%
+
+Summary
+Frames per second, 5.90647
+Cycles per frame, 1.46716e+08
+Energy per frames (mJ), 237.028
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.720868
+L1 misses per frame, 180165
+L1 misses per instruction, 0.00170373
+Instruction count per frame, 1.05747e+08
+****************************************
+removed img_outx, img_outy
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 3.637%
+Grayscale, 30.9648%
+Sobel, 63.5759%
+Display, 1.82233%
+
+Summary
+Frames per second, 6.86633
+Cycles per frame, 1.26235e+08
+Energy per frames (mJ), 203.893
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.713116
+L1 misses per frame, 131251
+L1 misses per instruction, 0.00145831
+Instruction count per frame, 9.00019e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 3.66488%
+Grayscale, 30.935%
+Sobel, 63.5906%
+Display, 1.80951%
+
+Summary
+Frames per second, 6.86717
+Cycles per frame, 1.26214e+08
+Energy per frames (mJ), 203.869
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.71304
+L1 misses per frame, 131133
+L1 misses per instruction, 0.00145736
+Instruction count per frame, 8.99799e+07
+****************************************
+grayScale opts: replace mults with adds, remove color
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 4.00818%
+Grayscale, 24.236%
+Sobel, 69.7566%
+Display, 1.99928%
+
+Summary
+Frames per second, 7.53693
+Cycles per frame, 1.15019e+08
+Energy per frames (mJ), 185.752
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.721046
+L1 misses per frame, 131232
+L1 misses per instruction, 0.00158273
+Instruction count per frame, 8.29147e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 4.00899%
+Grayscale, 24.2323%
+Sobel, 69.7504%
+Display, 2.0083%
+
+Summary
+Frames per second, 7.53454
+Cycles per frame, 1.15061e+08
+Energy per frames (mJ), 185.811
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.72102
+L1 misses per frame, 131489
+L1 misses per instruction, 0.00158537
+Instruction count per frame, 8.29391e+07
+****************************************
+char unsigned *img_data to avoid extra dereferencing
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 4.58062%
+Grayscale, 27.4456%
+Sobel, 65.701%
+Display, 2.27279%
+
+Summary
+Frames per second, 8.54058
+Cycles per frame, 1.01532e+08
+Energy per frames (mJ), 163.923
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.808115
+L1 misses per frame, 132669
+L1 misses per instruction, 0.00161763
+Instruction count per frame, 8.20149e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 4.53362%
+Grayscale, 27.4845%
+Sobel, 65.7123%
+Display, 2.26953%
+
+Summary
+Frames per second, 8.55342
+Cycles per frame, 1.01375e+08
+Energy per frames (mJ), 163.677
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.808987
+L1 misses per frame, 130117
+L1 misses per instruction, 0.0015872
+Instruction count per frame, 8.1979e+07
+****************************************
+current = IMG_WIDTH*i + j; in sobelCalc loop
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 6.12741%
+Grayscale, 37.2672%
+Sobel, 53.5247%
+Display, 3.08067%
+
+Summary
+Frames per second, 11.6377
+Cycles per frame, 7.4576e+07
+Energy per frames (mJ), 120.299
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.779005
+L1 misses per frame, 129622
+L1 misses per instruction, 0.00223257
+Instruction count per frame, 5.80597e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 6.23715%
+Grayscale, 37.3469%
+Sobel, 53.325%
+Display, 3.09092%
+
+Summary
+Frames per second, 11.6054
+Cycles per frame, 7.47928e+07
+Energy per frames (mJ), 120.634
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.777755
+L1 misses per frame, 130095
+L1 misses per instruction, 0.00223801
+Instruction count per frame, 5.81297e+07
+****************************************
+Stored common values to variables in sobelCalc
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 6.74952%
+Grayscale, 41.0599%
+Sobel, 48.7813%
+Display, 3.40929%
+
+Summary
+Frames per second, 12.8169
+Cycles per frame, 6.77443e+07
+Energy per frames (mJ), 109.231
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.777125
+L1 misses per frame, 128750
+L1 misses per instruction, 0.00244739
+Instruction count per frame, 5.26068e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 6.81967%
+Grayscale, 41.1285%
+Sobel, 48.6617%
+Display, 3.39019%
+
+Summary
+Frames per second, 12.7874
+Cycles per frame, 6.79049e+07
+Energy per frames (mJ), 109.482
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.776196
+L1 misses per frame, 129998
+L1 misses per instruction, 0.00246837
+Instruction count per frame, 5.26656e+07
+****************************************
+grayScale: (0.114, 0.587, 0.299) = (29, 150, 77)/256  
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 7.91637%
+Grayscale, 32.567%
+Sobel, 55.6391%
+Display, 3.87753%
+
+Summary
+Frames per second, 14.6023
+Cycles per frame, 5.94998e+07
+Energy per frames (mJ), 95.8752
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.884955
+L1 misses per frame, 129206
+L1 misses per instruction, 0.0024568
+Instruction count per frame, 5.2591e+07
+****************************************
+grayScale: 2 for loops converted into 1
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 8.15115%
+Grayscale, 29.3038%
+Sobel, 58.494%
+Display, 4.05108%
+
+Summary
+Frames per second, 15.2486
+Cycles per frame, 5.70011e+07
+Energy per frames (mJ), 91.8117
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.895412
+L1 misses per frame, 128247
+L1 misses per instruction, 0.00251631
+Instruction count per frame, 5.09661e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 8.19366%
+Grayscale, 29.2147%
+Sobel, 58.5524%
+Display, 4.0393%
+
+Summary
+Frames per second, 15.2701
+Cycles per frame, 5.69158e+07
+Energy per frames (mJ), 91.6826
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.895951
+L1 misses per frame, 128281
+L1 misses per instruction, 0.00251908
+Instruction count per frame, 5.09237e+07
+****************************************
+Vectorized grayScale
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 9.28725%
+Grayscale, 18.6442%
+Sobel, 67.4379%
+Display, 4.63068%
+
+Summary
+Frames per second, 17.4103
+Cycles per frame, 4.99632e+07
+Energy per frames (mJ), 80.4121
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.819043
+L1 misses per frame, 130582
+L1 misses per instruction, 0.00319562
+Instruction count per frame, 4.08628e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 9.2694%
+Grayscale, 18.7763%
+Sobel, 67.3233%
+Display, 4.63105%
+
+Summary
+Frames per second, 17.4343
+Cycles per frame, 4.98956e+07
+Energy per frames (mJ), 80.3016
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.818902
+L1 misses per frame, 129554
+L1 misses per instruction, 0.00317538
+Instruction count per frame, 4.07997e+07
+****************************************
+Vectorized sobelCalc
+****************************************
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 12.1378%
+Grayscale, 24.4952%
+Sobel, 57.2891%
+Display, 6.07801%
+
+Summary
+Frames per second, 22.8931
+Cycles per frame, 3.80834e+07
+Energy per frames (mJ), 61.1539
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.559758
+L1 misses per frame, 127632
+L1 misses per instruction, 0.00598742
+Instruction count per frame, 2.13166e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 12.1239%
+Grayscale, 24.5327%
+Sobel, 57.2708%
+Display, 6.07266%
+
+Summary
+Frames per second, 22.8672
+Cycles per frame, 3.81288e+07
+Energy per frames (mJ), 61.223
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.559571
+L1 misses per frame, 129718
+L1 misses per instruction, 0.00608038
+Instruction count per frame, 2.13339e+07
+*************** BEGIN RESULTS ***************
+Percent of time per function
+Capture, 12.1162%
+Grayscale, 24.5529%
+Sobel, 57.2523%
+Display, 6.0786%
+
+Summary
+Frames per second, 22.8399
+Cycles per frame, 3.81817e+07
+Energy per frames (mJ), 61.2963
+Total frames, 50
+
+Hardware Stats (Cap + Gray + Sobel + Display)
+Instructions per cycle, 0.560642
+L1 misses per frame, 130411
+L1 misses per instruction, 0.00609349
+Instruction count per frame, 2.14016e+07
