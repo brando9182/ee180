@@ -11,27 +11,32 @@ using namespace cv;
  ********************************************/
 void grayScale(Mat& img, Mat& img_gray_out, int thread) {
 	// weightings for grayscale average
-	uint8x8_t rweight = vdup_n_u8(77);
-	uint8x8_t gweight = vdup_n_u8(150);
-	uint8x8_t bweight = vdup_n_u8(29);
+	uint8x16_t rweight = vdupq_n_u8(77);
+	uint8x16_t gweight = vdupq_n_u8(150);
+	uint8x16_t bweight = vdupq_n_u8(29);
 
 	// vector code
 	int pixels = img.rows * img.cols;
 	int first = 0;
-	int increment = 8;
+	int increment = 16; //changing this to 16
 	if(thread == 2) first += 8;
 	if(thread != 0) increment +=8;
 
 	for(int i = first; i < pixels; i+=increment) {
-		// read from input
-		uint8x8x3_t bgr = vld3_u8(&img.data[3*i]);
+		//  load 16, 8 bit pixels into 3 registers
+        //need to change adress to 16 bit
+		uint8x16x3_t bgr = vld3q_u8(&img.data[3*i]);
 		// V = 77B + 150G + 29R
-		uint16x8_t acc = vmull_u8(bgr.val[0], bweight);
-		acc = vmlal_u8(acc, bgr.val[1], gweight);
-		acc = vmlal_u8(acc, bgr.val[2], rweight);
-		// V = V / 8
-		uint8x8_t result = vshrn_n_u16(acc, 8);
-		vst1_u8(&img_gray_out.data[i], result);
+        //16bit... big TODO: deal with overflow
+		uint8x16_t acc = vmulq_u8(bgr.val[0], bweight);
+        acc = vmlaq_u8(acc, bgr.val[1], gweight);
+		acc = vmlaq_u8(acc, bgr.val[2], rweight);
+        uint8x8_t acc1 = vget_high_u8(acc);
+        uint8x8_t acc2 = vget_low_u8(acc);
+        
+		vst1_u8(&img_gray_out.data[i], acc1);
+        vst1_u8(&img_gray_out.data[i] + increment /2, acc2);
+
 	}
 	// possible TODO: make sure vectors never read/write out of bounds
 }
